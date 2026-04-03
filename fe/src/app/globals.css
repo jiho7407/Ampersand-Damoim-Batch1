@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.13 0.01 264);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.01 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0.01 264);
+  --primary: oklch(0.42 0.15 264);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.01 264);
+  --secondary-foreground: oklch(0.42 0.15 264);
+  --muted: oklch(0.97 0.005 264);
+  --muted-foreground: oklch(0.52 0.04 264);
+  --accent: oklch(0.94 0.04 264);
+  --accent-foreground: oklch(0.42 0.15 264);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0.01 264);
+  --input: oklch(0.9 0.01 264);
+  --ring: oklch(0.42 0.15 264);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
